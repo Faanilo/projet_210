@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f1f2f3;
+}
+
+.wrapper {
+  margin-top: 200px;
+  justify-content: center;
+  display: flex;
+}
+
+.wrapper .static-txt {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.wrapper .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.dynamic-txts li {
+  list-style: none;
+  color: #030303;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  -webkit-animation: slide 12s steps(4) infinite;
+          animation: slide 12s steps(4) infinite;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #f7f7f8;
+  border-left: 2px solid #030303;
+  -webkit-animation: typing 3s steps(10) infinite;
+          animation: typing 3s steps(10) infinite;
+}
+
+@-webkit-keyframes typing {
+  40%, 60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes typing {
+  40%, 60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}/*# sourceMappingURL=home.css.map */
